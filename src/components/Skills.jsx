@@ -101,7 +101,7 @@ export default function Skills() {
             return (
               <div
                 key={category.id}
-                className="card-noir p-6 flex flex-col justify-between space-y-4"
+                className="card-noir p-6 flex flex-col space-y-4"
               >
                 {/* Category Header */}
                 <div className="space-y-2 border-b border-white/8 pb-3">
