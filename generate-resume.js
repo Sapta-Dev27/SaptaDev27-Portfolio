@@ -1,0 +1,176 @@
+import fs from "fs";
+import path from "path";
+
+// Ensure assets dir exists
+const assetsDir = path.resolve("./public/assets");
+if (!fs.existsSync(assetsDir)) {
+  fs.mkdirSync(assetsDir, { recursive: true });
+}
+
+// Minimal valid PDF generator for Saptarshi Paul's Resume
+function createResumePdf() {
+  const content = `%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Length 1800 >>
+stream
+BT
+/F1 20 Tf
+50 740 Td
+(SAPTARSHI PAUL) Tj
+ET
+BT
+/F2 10 Tf
+50 722 Td
+(Software Engineer | Full-Stack Developer | AI Builder) Tj
+ET
+BT
+/F2 9 Tf
+50 706 Td
+(Kolkata, West Bengal, India | saptarshi2027paul@gmail.com | +91-7980599896 | LeetCode: SaptaDev27 | GitHub: Sapta-Dev27) Tj
+ET
+BT
+/F1 12 Tf
+50 675 Td
+(EDUCATION) Tj
+ET
+BT
+/F1 10 Tf
+50 658 Td
+(Techno Main Salt Lake, Kolkata) Tj
+/F2 9 Tf
+0 -13 Td
+(B.Tech in Computer Science and Engineering (Data Science) | Aug 2023 - June 2027 | CGPA: 7.7/10.00) Tj
+ET
+BT
+/F1 12 Tf
+50 622 Td
+(EXPERIENCE) Tj
+ET
+BT
+/F1 10 Tf
+50 605 Td
+(Pinggy - Software Engineer Intern (Remote)) Tj
+/F2 9 Tf
+0 -13 Td
+(Sep 2026 - Present | Full-Stack Development, React.js, Node.js, REST APIs, MongoDB/SQL) Tj
+0 -12 Td
+(- Developed and integrated frontend components and backend services, debugging issues and improving performance.) Tj
+0 -12 Td
+(- Enhanced application reliability, responsiveness, and user experience across distributed endpoints.) Tj
+ET
+BT
+/F1 10 Tf
+50 545 Td
+(Techno Billion AI - Full Stack Software Engineer Intern (Hybrid)) Tj
+/F2 9 Tf
+0 -13 Td
+(Aug 2025 - Oct 2025 | Full Stack Development, Software Engineering) Tj
+0 -12 Td
+(- Contributed to full-stack development and developed end-to-end features and backend services.) Tj
+0 -12 Td
+(- Implemented RESTful APIs, database interactions, debugging workflows, and reliability/scalability improvements.) Tj
+ET
+BT
+/F1 12 Tf
+50 485 Td
+(PROJECTS) Tj
+ET
+BT
+/F1 10 Tf
+50 468 Td
+(HireBuddy - AI-Powered Career Copilot (React, Node.js, Express, MongoDB, JWT, AI Agents)) Tj
+/F2 9 Tf
+0 -13 Td
+(- Built full-stack platform for resume ATS analysis, job discovery, application tracking, and GitHub scoring.) Tj
+0 -12 Td
+(- Implemented REST APIs, JWT auth, AI agents for simulated mock interviews, and automated job scraping workflows.) Tj
+ET
+BT
+/F1 10 Tf
+50 422 Td
+(uPay - Digital Wallet & UPI Payment System (Express, MongoDB, JWT, REST APIs)) Tj
+/F2 9 Tf
+0 -13 Td
+(- Built backend payment platform supporting wallet management, P2P transfers, dynamic UPI IDs, recharges & refunds.) Tj
+0 -12 Td
+(- Implemented MPIN authorization, protected API routes, and controller-middleware-model architecture.) Tj
+ET
+BT
+/F1 10 Tf
+50 376 Td
+(InspiroAI - AI-Powered SaaS Platform (React, Express, MongoDB, JWT, Gemini, Stability AI)) Tj
+/F2 9 Tf
+0 -13 Td
+(- Full-stack generative AI SaaS for automated blogs, articles, image generation, thumbnails, and resume analysis.) Tj
+0 -12 Td
+(- Integrated Gemini LLM & Stability AI APIs with responsive content-sharing workflows and user dashboards.) Tj
+ET
+BT
+/F1 12 Tf
+50 328 Td
+(TECHNICAL SKILLS) Tj
+ET
+BT
+/F2 9 Tf
+50 311 Td
+(Languages: Java, C++, JavaScript | Web: ReactJS, UI Libraries, NodeJS, Express) Tj
+0 -13 Td
+(Databases: MongoDB, SQL, PostgreSQL | DevOps: Git, Docker, CI/CD | Tools: Postman, VS Code, Copilot, Antigravity) Tj
+0 -13 Td
+(CS Fundamentals: System Design, OOPS, Computer Networks, Operating Systems, Data Structures & Algorithms) Tj
+ET
+BT
+/F1 12 Tf
+50 255 Td
+(ACHIEVEMENTS & LEADERSHIP) Tj
+ET
+BT
+/F2 9 Tf
+50 238 Td
+(- 750+ Problems Solved on LeetCode with 1577 Contest Rating across 25+ Contests.) Tj
+0 -13 Td
+(- Tech Lead (Web Dev Team) @ GDG On Campus TMSL; previously Core Team Web Dev.) Tj
+0 -13 Td
+(- 2X Top 10 Open Source Contributor (Apetre 2.0 - Feb 2025 & Apetre - Feb 2024).) Tj
+0 -13 Td
+(- State Level Hackathon Winner: CraftNCode, IIIT Bhubaneswar (Nov 2024) - Top 2 teams from state.) Tj
+0 -13 Td
+(- 2X Top 10 Finalist @ Double Slash 3.0 & Double Slash 4.0 Hackathons (Jadavpur University).) Tj
+ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000244 00000 n 
+0000000318 00000 n 
+0000000386 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2250
+%%EOF`;
+
+  fs.writeFileSync(path.join(assetsDir, "Saptarshi_Paul_Resume.pdf"), content, "binary");
+  console.log("Generated Saptarshi_Paul_Resume.pdf successfully.");
+}
+
+createResumePdf();

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#080c15"/>
+  <rect x="1" y="1" width="62" height="62" rx="15" stroke="url(#borderGrad)" stroke-width="2" stroke-opacity="0.6"/>
+  <path d="M22 20C18.6863 20 16 22.6863 16 26C16 29.3137 18.6863 32 22 32H28C31.3137 32 34 34.6863 34 38C34 41.3137 31.3137 44 28 44H16" stroke="url(#spGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M38 44V20H46C49.3137 20 52 22.6863 52 26C52 29.3137 49.3137 32 46 32H38" stroke="url(#spGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <defs>
+    <linearGradient id="spGrad" x1="16" y1="20" x2="52" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00F0FF"/>
+      <stop offset="0.5" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00F0FF" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#6366F1" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+</svg>
