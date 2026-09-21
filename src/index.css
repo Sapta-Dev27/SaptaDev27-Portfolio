@@ -418,14 +418,15 @@ input, textarea {
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  z-index: 100;
+  z-index: 200;
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 1rem;
+  padding: 80px 1rem 2rem;
+  overflow-y: auto;
 }
 
 .modal-content {
@@ -433,10 +434,12 @@ input, textarea {
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-xl);
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.85);
-  max-height: 90vh;
+  max-height: calc(100vh - 100px);
   overflow-y: auto;
   width: 100%;
   position: relative;
+  flex-shrink: 0;
+  margin: 0 auto;
 }
 
 .modal-content::before {
